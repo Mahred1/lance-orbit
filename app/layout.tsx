@@ -1,8 +1,8 @@
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google"
+import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
