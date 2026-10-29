@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --font-heading: var(--font-mono);
-    --font-mono: var(--font-mono);
+    --font-heading: var(--font-lo-sans);
+    --font-lo: var(--font-lo-sans);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -124,6 +124,6 @@
     @apply bg-background text-foreground;
     }
   html {
-    @apply font-mono;
+    @apply font-lo;
     }
 }
