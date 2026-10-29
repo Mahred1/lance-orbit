@@ -5,72 +5,25 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  
+  
+  /* Font weights */
   --font-weight-lo-regular: 400;
   --font-weight-lo-medium: 500;
   --font-weight-lo-semibold: 600;
   --font-weight-lo-bold: 700;
 
-  --text-lo-display-lg-semibold: 48px;
-  --text-lo-display-lg-semibold--line-height: 60px;
-  --text-lo-display-lg-semibold--letter-spacing: -0.02em;
-  --text-lo-display-lg-semibold--font-weight: 600;
+  /* Font sizes */
+  --text-lo-display-lg: 48px;
+  --text-lo-display-md: 36px;
+  --text-lo-display-sm: 30px;
+  --text-lo-display-xs: 24px;
+  --text-lo-xl: 20px;
+  --text-lo-lg: 18px;
+  --text-lo-md: 16px;
+  --text-lo-sm: 14px;
+  --text-lo-xs: 12px;
 
-  --text-lo-display-md-semibold: 36px;
-  --text-lo-display-md-semibold--line-height: 44px;
-  --text-lo-display-md-semibold--letter-spacing: -0.02em;
-  --text-lo-display-md-semibold--font-weight: 600;
-
-  --text-lo-display-sm-medium: 30px;
-  --text-lo-display-sm-medium--line-height: 36px;
-  --text-lo-display-sm-medium--letter-spacing: 0em;
-  --text-lo-display-sm-medium--font-weight: 500;
-
-  --text-lo-display-sm-semibold: 30px;
-  --text-lo-display-sm-semibold--line-height: 36px;
-  --text-lo-display-sm-semibold--letter-spacing: 0em;
-  --text-lo-display-sm-semibold--font-weight: 600;
-
-  --text-lo-display-xs-medium: 24px;
-  --text-lo-display-xs-medium--line-height: 32px;
-  --text-lo-display-xs-medium--letter-spacing: 0em;
-  --text-lo-display-xs-medium--font-weight: 500;
-
-  --text-lo-text-xl-bold: 20px;
-  --text-lo-text-xl-bold--line-height: 30px;
-  --text-lo-text-xl-bold--letter-spacing: 0em;
-  --text-lo-text-xl-bold--font-weight: 700;
-
-  --text-lo-text-xl-medium: 20px;
-  --text-lo-text-xl-medium--line-height: 30px;
-  --text-lo-text-xl-medium--letter-spacing: 0em;
-  --text-lo-text-xl-medium--font-weight: 500;
-
-  --text-lo-text-xl-regular: 20px;
-  --text-lo-text-xl-regular--line-height: 30px;
-  --text-lo-text-xl-regular--letter-spacing: 0em;
-  --text-lo-text-xl-regular--font-weight: 400;
-  --color-lo-base-white: #ffffff;
-  --color-lo-base-black: #000000;
-  --color-lo-rose-200: #fda4af;
-  --color-lo-rose-400: #f43f5e;
-  --color-lo-rose-600: #be123c;
-  --color-lo-blue-600: #1d4ed8;
-  --color-lo-green-50: #d1fae5;
-  --color-lo-green-100: #a7f3d0;
-  --color-lo-green-400: #10b981;
-  --color-lo-green-500: #059669;
-  --color-lo-red-50: #fee2e2;
-  --color-lo-red-500: #dc2626;
-  --color-lo-stone-100: #e7e5e4;
-  --color-lo-gray-25: #f9fafb;
-  --color-lo-gray-50: #f3f4f6;
-  --color-lo-gray-100: #e5e7eb;
-  --color-lo-gray-200: #d1d5db;
-  --color-lo-gray-300: #9ca3af;
-  --color-lo-gray-400: #6b7280;
-  --color-lo-gray-500: #4b5563;
-  --color-lo-gray-600: #374151;
-  --color-lo-gray-700: #1f2937;
   --font-heading: var(--font-lo-sans);
   --font-lo: var(--font-lo-sans);
   --color-sidebar-ring: var(--sidebar-ring);
