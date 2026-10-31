@@ -13,7 +13,7 @@ export const signInWithGithub = async () => {
 export const signInWithGoogle = async () => {
     const data = await authClient.signIn.social({
 
-        provider: "github",
+        provider: "google",
         callbackURL: "/dashboard"
     })
 }
