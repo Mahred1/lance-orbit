@@ -3,7 +3,14 @@ import { createAuthClient } from "better-auth/client"
      baseURL: "http://localhost:3000"
 })
 
-export const signIn = async () => {
+export const signInWithGithub = async () => {
+    const data = await authClient.signIn.social({
+
+        provider: "github",
+        callbackURL: "/dashboard"
+    })
+}
+export const signInWithGoogle = async () => {
     const data = await authClient.signIn.social({
 
         provider: "github",

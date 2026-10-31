@@ -1,13 +1,12 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import {signIn} from '@/lib/auth-client'
-import React from 'react'
+import { signInWithGithub, signInWithGoogle } from '@/lib/auth-client'
 
 const OauthButtons = () => {
   return (
         <div className="flex w-full flex-col gap-2">
-          <Button className="flex items-center gap-1 rounded-sm border-[1.5px] border-gray-300 bg-stone-100 font-medium text-gray-500 hover:cursor-pointer hover:bg-stone-200">
+          <Button onClick={()=>signInWithGoogle()} className="flex items-center gap-1 rounded-sm border-[1.5px] border-gray-300 bg-stone-100 font-medium text-gray-500 hover:cursor-pointer hover:bg-stone-200">
             <span>
               <svg
                 width="24"
@@ -47,7 +46,7 @@ const OauthButtons = () => {
             </span>{" "}
             Continue with google
           </Button>
-          <Button onClick={()=>signIn()} className="flex items-center gap-1 rounded-sm border-[1.5px] border-gray-300 bg-stone-100 font-medium text-gray-500 hover:cursor-pointer hover:bg-gray-200">
+          <Button onClick={()=>signInWithGithub()} className="flex items-center gap-1 rounded-sm border-[1.5px] border-gray-300 bg-stone-100 font-medium text-gray-500 hover:cursor-pointer hover:bg-gray-200">
             <span>
               <svg
                 width="24"
