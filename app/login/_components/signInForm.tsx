@@ -5,6 +5,8 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Field, FieldLabel } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { authClient } from "@/lib/auth-client"
+import { cn } from "cn"
+import Link from "next/link"
 import { useState } from "react"
 import z from "zod"
 
@@ -49,37 +51,37 @@ const SignInForm = () => {
       },
       {}
     )
-    console.log(data, error)
+   
   }
   return (
     <form action={handleSignIn} className="flex w-full flex-col gap-6">
       <div>
         {" "}
         <Field>
-          <FieldLabel>Email</FieldLabel>
+          <FieldLabel className="text-lo-sm">Email</FieldLabel>
           <Input
             name="email"
-            className="rounded-sm border-[1.5px] border-gray-200 bg-gray-50 text-gray-300"
+            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["email"][0]&&"border-red-200 focus:border-red-200 text-red-400 border-3 placeholder:text-red-500" )}
             placeholder="john.doe@gmail.com"
           ></Input>
-          {formInputError["email"]&&<div>{formInputError["email"][0]}</div>}
-        </Field>
+          {formInputError["email"]&&<div className="text-red-400 text-lo-sm">{formInputError["email"][0]}</div>}
+        </Field>      
         <Field className="mt-2">
-          <FieldLabel>Password</FieldLabel>
+          <FieldLabel className="text-lo-sm">Password</FieldLabel>
           <Input
             name="password"
-            className="rounded-sm border-[1.5px] border-gray-200 bg-gray-50 text-gray-300"
+            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["password"][0]&&"border-red-200 focus:border-red-200  text-red-400 border-3 placeholder:text-red-500")}
             placeholder="*********"
           ></Input>
-          {formInputError["password"]&&<div>{formInputError["password"][0]}</div>}
+          {formInputError["password"]&&<div className="text-red-400 text-lo-sm">{formInputError["password"][0]}</div>}
 
         </Field>
         <div className="mt-2 flex items-center justify-between">
-          <div className="flex items-center gap-1 text-lo-xs">
+          <div className="flex items-center gap-1 text-lo-sm">
             <Checkbox className={"h-4 w-4 border-gray-300"}></Checkbox>
             <p>Remember me</p>
           </div>
-          <p className="text-lo-xs">Forgot your password?</p>
+          <p className="text-lo-sm">Forgot your password?</p>
         </div>
       </div>
 
@@ -90,9 +92,9 @@ const SignInForm = () => {
         >
           Login
         </Button>
-        <p className="text-lo-xs">
+        <p className="text-lo-sm">
           Don’t have an account?{" "}
-          <span className="tracking-wide text-blue-500">Sign-up</span>{" "}
+          <Link href={'/signup'} className="tracking-wide text-blue-500">Sign-up</Link>{" "}
         </p>
       </div>
     </form>
