@@ -1,5 +1,6 @@
 "use client"
 
+import { ROUTES } from "@/app/constants/routes"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Field, FieldLabel } from "@/components/ui/field"
@@ -45,7 +46,7 @@ const SignInForm = () => {
 
         password: formData.get("password") as string,
 
-        callbackURL: "/dashboard",
+        callbackURL: ROUTES.DASHBOARD,
 
         rememberMe: false,
       },
@@ -94,7 +95,7 @@ const SignInForm = () => {
         </Button>
         <p className="text-lo-sm">
           Don’t have an account?{" "}
-          <Link href={'/signup'} className="tracking-wide text-blue-500">Sign-up</Link>{" "}
+          <Link href={ROUTES.SIGNUP} className="tracking-wide text-blue-500">Sign-up</Link>{" "}
         </p>
       </div>
     </form>
