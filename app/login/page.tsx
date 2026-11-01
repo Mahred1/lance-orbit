@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import signIn from "@/lib/auth-client"
 import React from "react"
 import OauthButtons from "./_components/OauthButtons"
+import SignInForm from "./_components/signInForm"
 
 const Page = () => {
   return (
@@ -31,40 +32,7 @@ const Page = () => {
         </div>
 
         {/* {Form} */}
-        <form action="" className="flex w-full flex-col gap-6">
-          <div>
-            {" "}
-            <Field>
-              <FieldLabel>Email</FieldLabel>
-              <Input
-                className="rounded-sm border-[1.5px] border-gray-200 bg-gray-50 text-gray-300"
-                placeholder="john.doe@gmail.com"
-              ></Input>
-            </Field>
-            <Field className="mt-2">
-              <FieldLabel>Password</FieldLabel>
-              <Input
-                className="rounded-sm border-[1.5px] border-gray-200 bg-gray-50 text-gray-300"
-                placeholder="*********"
-              ></Input>
-            </Field>
-            <div className="mt-2 flex items-center justify-between">
-              <div className="flex items-center gap-1 text-lo-xs">
-                <Checkbox className={"h-4 w-4 border-gray-300"}></Checkbox>
-                <p>Remember me</p>
-              </div>
-              <p className="text-lo-xs">Forgot your password?</p>
-            </div>
-          </div>
-
-          <div className="w-full flex flex-col items-center gap-2">
-            <Button className={"rounded-sm min-w-full hover:cursor-pointer"}>Login</Button>
-            <p className="text-lo-xs">
-              Don’t have an account?{" "}
-              <span className="text-blue-500 tracking-wide">Sign-up</span>{" "}
-            </p>
-          </div>
-        </form>
+        <SignInForm/>
 </div>
      
       </div>
