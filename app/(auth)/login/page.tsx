@@ -1,10 +1,4 @@
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Field, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
-import signIn from "@/lib/auth-client"
-import React from "react"
-import OauthButtons from "./_components/OauthButtons"
+import OauthButtons from "../OauthButtons"
 import SignInForm from "./_components/signInForm"
 
 const Page = () => {

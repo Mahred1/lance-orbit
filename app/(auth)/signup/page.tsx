@@ -1,6 +1,6 @@
 import React from 'react'
 import SignUpForm from './_components/SignUpForm'
-import OauthButtons from '@/app/login/_components/OauthButtons'
+import OauthButtons from '../OauthButtons'
 
 const SignUpPage = () => {
   return (
