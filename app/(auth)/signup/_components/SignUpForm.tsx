@@ -15,7 +15,7 @@ const SignUpForm = () => {
   const signUpInputSchema = z.object({
     email: z.email("Please enter a valid email address."),
     password: z.string().min(8, "Password must be at least 8 characters."),
-    name: z.string("name should be atleast 3 characters"),
+    name: z.string().min(3,"name should be atleast 3 characters"),
     image: z.url().optional(),
   })
 
@@ -35,6 +35,7 @@ const SignUpForm = () => {
     const validatedInputs = signUpInputSchema.safeParse({
       email: formData.get("email"),
       password: formData.get("password"),
+      name: formData.get("name"),
     })
 
     if (!validatedInputs.success) {
@@ -62,6 +63,7 @@ const { error } = await authClient.signUp.email({
         },
         onError: (ctx) => {
             alert(ctx.error.message);
+            setLoading(false)
         },
 });
 
