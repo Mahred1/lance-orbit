@@ -7,8 +7,10 @@ import { Field, FieldLabel } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { authClient } from "@/lib/auth-client"
 import { cn } from "cn"
+import { error } from "console"
 import Link from "next/link"
 import React, { useState } from "react"
+import { toast } from "sonner"
 import z from "zod"
 
 const signInInputSchema = z.object({
@@ -53,6 +55,7 @@ const SignInForm = () => {
       },
       {}
     )
+    if(error !== null) toast.error(error?.message)
   }
   return (
     <form action={handleSignIn} className="flex w-full flex-col gap-6">

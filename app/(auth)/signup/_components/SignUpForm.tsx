@@ -9,6 +9,7 @@ import { cn } from "cn"
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import React, { useState } from "react"
+import { toast } from "sonner"
 import z from "zod"
 
 const SignUpForm = () => {
@@ -62,7 +63,7 @@ const { error } = await authClient.signUp.email({
             redirect(ROUTES.DASHBOARD)
         },
         onError: (ctx) => {
-            alert(ctx.error.message);
+            toast.error(ctx.error.message)
             setLoading(false)
         },
 });
