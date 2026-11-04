@@ -97,10 +97,7 @@ const { error } = await authClient.signUp.email({
           {formInputError["password"]&&<div className="text-red-400 text-lo-sm">{formInputError["password"][0]}</div>}
 
         </Field>
-          <div className="flex mt-2 items-center gap-1 text-lo-sm">
-            <Checkbox className={"h-4 w-4 border-gray-300"}></Checkbox>
-            <p>Remember me</p>
-          </div>
+
         
       </div>
 
