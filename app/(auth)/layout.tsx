@@ -5,13 +5,19 @@ import { auth } from "@/lib/auth"
 import { headers } from "next/headers"
 import { redirect } from "next/navigation"
 import { ROUTES } from "../constants/routes"
+import { getUser } from "../data/user/get-user"
+import { toast } from "sonner"
 
 const layout = async ({ children }: Readonly<{ children: React.ReactNode}>) => {
+  const user= getUser()
 
-  const session = await auth.api.getSession({headers: await headers()})
+if(!user){
+  toast("Unauthorized")
+  redirect(ROUTES.LOGIN)
 
-if(session.user !== null){
+}else{
   redirect(ROUTES.DASHBOARD)
+
 }
 
   return (
