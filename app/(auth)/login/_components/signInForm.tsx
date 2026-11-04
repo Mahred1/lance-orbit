@@ -64,14 +64,14 @@ const SignInForm = () => {
             name="email"
             className={cn(
               "rounded-sm border-[1.5px] border-gray-200 bg-gray-50 px-2 py-4 text-gray-300",
-              formInputError["email"][0] &&
+              formInputError["email"]?.at(0) &&
                 "border-3 border-red-200 text-red-400 placeholder:text-red-500 focus:border-red-200"
             )}
             placeholder="john.doe@gmail.com"
           ></Input>
           {formInputError["email"] && (
             <div className="text-lo-sm text-red-400">
-              {formInputError["email"][0]}
+              {formInputError["email"]?.at(0)}
             </div>
           )}
         </Field>
@@ -81,7 +81,7 @@ const SignInForm = () => {
             name="password"
             className={cn(
               "rounded-sm border-[1.5px] border-gray-200 bg-gray-50 px-2 py-4 text-gray-300",
-              formInputError["password"][0] &&
+              formInputError["password"]?.at(0) &&
                 "border-3 border-red-200 text-red-400 placeholder:text-red-500 focus:border-red-200"
             )}
             placeholder="*********"

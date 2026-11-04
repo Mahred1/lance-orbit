@@ -73,7 +73,7 @@ const { error } = await authClient.signUp.email({
           <FieldLabel className="text-lo-sm">Name</FieldLabel>
           <Input
             name="name"
-            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["email"][0]&&"border-red-200 focus:border-red-200 text-red-400 border-3 placeholder:text-red-500" )}
+            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["email"]?.at(0)&&"border-red-200 focus:border-red-200 text-red-400 border-3 placeholder:text-red-500" )}
             placeholder="Jhone Doe"
           ></Input>
           {formInputError["name"]&&<div className="text-red-400 text-lo-sm">{formInputError["name"][0]}</div>}
@@ -82,7 +82,7 @@ const { error } = await authClient.signUp.email({
           <FieldLabel className="text-lo-sm">Email</FieldLabel>
           <Input
             name="email"
-            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["email"][0]&&"border-red-200 focus:border-red-200 text-red-400 border-3 placeholder:text-red-500" )}
+            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["email"]?.at(0)&&"border-red-200 focus:border-red-200 text-red-400 border-3 placeholder:text-red-500" )}
             placeholder="john.doe@gmail.com"
           ></Input>
           {formInputError["email"]&&<div className="text-red-400 text-lo-sm">{formInputError["email"][0]}</div>}
@@ -91,7 +91,7 @@ const { error } = await authClient.signUp.email({
           <FieldLabel className="text-lo-sm">Password</FieldLabel>
           <Input
             name="password"
-            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["password"][0]&&"border-red-200 focus:border-red-200  text-red-400 border-3 placeholder:text-red-500")}
+            className={cn("rounded-sm border-[1.5px] py-4 px-2 border-gray-200 bg-gray-50 text-gray-300",formInputError["password"]?.at(0)&&"border-red-200 focus:border-red-200  text-red-400 border-3 placeholder:text-red-500")}
             placeholder="*********"
           ></Input>
           {formInputError["password"]&&<div className="text-red-400 text-lo-sm">{formInputError["password"][0]}</div>}
