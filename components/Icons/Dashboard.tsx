@@ -6,7 +6,7 @@ type Icontypes={
 }
 const Dashboard = ({className,fill='white',stroke="white"}:Icontypes) => {
   return (
-    <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path  d="M9.33337 13.4V9.93333C9.33337 9.60196 9.602 9.33333 9.93337 9.33333H13.4C13.7314 9.33333 14 9.60196 14 9.93333V13.4C14 13.7314 13.7314 14 13.4 14H9.93337C9.602 14 9.33337 13.7314 9.33337 13.4Z" fill={fill} stroke={stroke}/>
 <path d="M2 13.4V9.93333C2 9.60196 2.26863 9.33333 2.6 9.33333H6.06667C6.39804 9.33333 6.66667 9.60196 6.66667 9.93333V13.4C6.66667 13.7314 6.39804 14 6.06667 14H2.6C2.26863 14 2 13.7314 2 13.4Z" fill={fill} stroke={stroke}/>
 <path d="M9.33337 6.06667V2.6C9.33337 2.26863 9.602 2 9.93337 2H13.4C13.7314 2 14 2.26863 14 2.6V6.06667C14 6.39804 13.7314 6.66667 13.4 6.66667H9.93337C9.602 6.66667 9.33337 6.39804 9.33337 6.06667Z" fill={fill} stroke={stroke}/>
