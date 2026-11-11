@@ -13,12 +13,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import Dashboard from "../Icons/Dashboard"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./dropdown-menu"
+import { sideBarItems } from "@/app/constants/sideBarItems"
 
 export function AppSidebar() {
   return (
@@ -39,20 +34,25 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup className="">
           <SidebarGroupContent>
-            <SidebarMenu className="flex flex-col gap-2">
-              <SidebarMenuItem className=" ">
-                <Link
-                  className="group/navlink min-h-full min-w-full"
-                  href={ROUTES.DASHBOARD}
-                >
-                  <SidebarMenuButton className="cursor-pointer  rounded-md border-[0.5px] bg-black px-4 py-2 text-white transition-all ease-in hover:border-black hover:bg-white hover:text-black">
-                    <Dashboard className="h-6 w-6 group-hover/navlink:[&_path]:fill-black group-hover/navlink:[&_path]:stroke-black" />
-                    <span className="text-lo-sm group-data-[collapsible=icon]:hidden">
-                      Dashboard
-                    </span>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
+            <SidebarMenu className="flex flex-col">
+              {sideBarItems.map((item, index) => {
+                return (
+                  <SidebarMenuItem key={index}>
+                    <Link
+                      className="group/navlink min-h-full min-w-full"
+
+                      href={item.href}
+                    >
+                      <SidebarMenuButton className="cursor-pointer rounded-md border-[0.5px] bg-black px-4 py-3 text-white transition-all ease-in hover:border-black hover:bg-white hover:text-black">
+                        <item.icon className="h-6 w-6 " />
+                        <span className="text-lo-sm group-data-[collapsible=icon]:hidden">
+                          {item.name}
+                        </span>
+                      </SidebarMenuButton>
+                    </Link>
+                  </SidebarMenuItem>
+                )
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
