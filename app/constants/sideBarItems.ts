@@ -16,16 +16,16 @@ export const sideBarItems: SideBarItemsType = [
   {
     name: "Projects",
     icon: FolderKanban,
-    href: ROUTES.DASHBOARD,
+    href: ROUTES.PROJECTS,
   },
   {
     name: "Clients",
     icon: Users ,
-    href: ROUTES.DASHBOARD,
+    href: ROUTES.CLIENTS,
   },
   {
     name: "Invoices",
     icon: ReceiptText ,
-    href: ROUTES.DASHBOARD,
+    href: ROUTES.INVOICES,
   },
 ]

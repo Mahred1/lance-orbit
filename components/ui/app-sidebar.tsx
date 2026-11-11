@@ -13,12 +13,18 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { useCurrentPath } from "@/hooks/useCurrentPath"
+import { cn } from "cn"
 import Image from "next/image"
 import Link from "next/link"
 
+const styles = {
+  active:
+    " hover:border-black hover:bg-white hover:text-black bg-black text-white",
+  inActive: "hover:border-black  hover:bg-black  border-gray-50 hover:text-white  ",
+}
 export function AppSidebar() {
-const [pathname] = useCurrentPath()
-console.log( pathname)
+  const [pathname] = useCurrentPath()
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
@@ -43,10 +49,16 @@ console.log( pathname)
                   <SidebarMenuItem key={index}>
                     <Link
                       className="group/navlink min-h-full min-w-full"
-
                       href={item.href}
                     >
-                      <SidebarMenuButton className="cursor-pointer rounded-md border-[0.5px] bg-black px-4 py-3 text-white transition-all ease-in hover:border-black hover:bg-white hover:text-black">
+                      <SidebarMenuButton
+                        className={cn(
+                          pathname.includes(item.href)
+                            ? styles.active
+                            : styles.inActive,
+                          "cursor-pointer rounded-md border-[0.5px] px-4 py-3 transition-all ease-in"
+                        )}
+                      >
                         <item.icon className="h-6 w-6" />
                         <span className="text-lo-sm group-data-[collapsible=icon]:hidden">
                           {item.name}
