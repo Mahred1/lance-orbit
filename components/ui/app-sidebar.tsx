@@ -1,4 +1,6 @@
+"use client"
 import { ROUTES } from "@/app/constants/routes"
+import { sideBarItems } from "@/app/constants/sideBarItems"
 import {
   Sidebar,
   SidebarContent,
@@ -10,12 +12,13 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { useCurrentPath } from "@/hooks/useCurrentPath"
 import Image from "next/image"
 import Link from "next/link"
-import Dashboard from "../Icons/Dashboard"
-import { sideBarItems } from "@/app/constants/sideBarItems"
 
 export function AppSidebar() {
+const [pathname] = useCurrentPath()
+console.log( pathname)
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
@@ -44,7 +47,7 @@ export function AppSidebar() {
                       href={item.href}
                     >
                       <SidebarMenuButton className="cursor-pointer rounded-md border-[0.5px] bg-black px-4 py-3 text-white transition-all ease-in hover:border-black hover:bg-white hover:text-black">
-                        <item.icon className="h-6 w-6 " />
+                        <item.icon className="h-6 w-6" />
                         <span className="text-lo-sm group-data-[collapsible=icon]:hidden">
                           {item.name}
                         </span>

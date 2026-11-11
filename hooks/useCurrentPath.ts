@@ -9,7 +9,7 @@ export const useCurrentPath = () => {
   if (pathname) {
     currentRoute = Object.entries(ROUTES)
       .filter((route) => route.includes(pathname))
-      .toString()
+      .toString().split(",")[1]
   }
   return [currentRoute]
 }
