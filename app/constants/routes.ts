@@ -6,4 +6,7 @@ export const ROUTES = {
   PROJECTS: '/projects',
   CLIENTS: '/clients',
   INVOICES: '/invoices',
-} as const
+   SETTING:'/setting',
+  SUPPORT:'/support',
+  
+} as const 

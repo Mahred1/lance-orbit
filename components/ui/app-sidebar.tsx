@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sidebar"
 import { useCurrentPath } from "@/hooks/useCurrentPath"
 import { cn } from "cn"
+import { Headset, LogOut, Settings } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -72,7 +73,26 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter />
+         <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <Link className=" flex gap-2" href={ROUTES.SETTING}><Settings size={24} /><span className="text-lo-sm font font-medium">Setting</span></Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <Link className=" flex gap-2" href={ROUTES.SUPPORT}><Headset size={24} /><span className="text-lo-sm font font-medium">Support</span></Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <Link className=" flex gap-2" href={ROUTES.SETTING}><LogOut size={24} /><span className="text-lo-sm font font-medium">Log-out</span></Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   )
 }
