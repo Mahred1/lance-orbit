@@ -2,7 +2,7 @@ import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
-import "./globals.css"
+import "@/app/globals.css"
 import { Toaster } from "sonner"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/ui/app-sidebar"
