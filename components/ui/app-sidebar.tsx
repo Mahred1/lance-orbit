@@ -13,6 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { useCurrentPath } from "@/hooks/useCurrentPath"
+import { signOut } from "@/lib/auth-client"
 import { cn } from "cn"
 import { Headset, LogOut, Settings } from "lucide-react"
 import Image from "next/image"
@@ -87,7 +88,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton>
-              <Link className=" flex gap-2" href={ROUTES.SETTING}><LogOut size={24} /><span className="text-lo-sm font font-medium">Log-out</span></Link>
+              <Link href={''} onClick={()=>signOut()} className=" flex gap-2" ><LogOut size={24} /><span className="text-lo-sm font font-medium">Log-out</span></Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         
