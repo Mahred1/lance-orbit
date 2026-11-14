@@ -1,6 +1,6 @@
+import DashboardCard from "@/components/ui/dashboard-card"
 import { requireAuth } from "@/lib/dal"
 import React from "react"
-import DashboardCard from "./_components/dashboard-card"
 
 const Dashboard = async () => {
   const session = await requireAuth()
