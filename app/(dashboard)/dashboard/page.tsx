@@ -10,7 +10,9 @@ const Dashboard = async () => {
       <h1 className="text-lo-xl font-medium">Dashboard Overview</h1>
 
       {/* Dashboard Card */}
+
       <section className="flex items-center flex-wrap  gap-4">
+
         <DashboardCard
           title="Active Projects"
           value="50"
