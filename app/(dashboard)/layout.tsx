@@ -1,11 +1,11 @@
-import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google"
 
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils"
 import "@/app/globals.css"
-import { Toaster } from "sonner"
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { ThemeProvider } from "@/components/theme-provider"
 import { AppSidebar } from "@/components/ui/app-sidebar"
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { cn } from "@/lib/utils"
+import { Toaster } from "sonner"
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -29,7 +29,7 @@ export default function RootLayout({
             <AppSidebar />
 
             <main>
-              <SidebarTrigger />
+              <SidebarTrigger />    
               {children}
             </main>
           </SidebarProvider>

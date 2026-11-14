@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className="flex min-h-svh p-6">
       <h1 className="lo-sans text-5xl"></h1>
-      <h1 className=" text-5xl"></h1>
+      <h1 className=" text-5xl">eeeee</h1>
     </div>
   )
 }
