@@ -29,7 +29,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader>
+      <SidebarHeader className="mb-2">
         <Link className="flex items-center gap-2" href={ROUTES.DASHBOARD}>
           <Image
             src={"orbit.svg"}
