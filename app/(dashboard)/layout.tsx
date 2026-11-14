@@ -28,7 +28,7 @@ export default function RootLayout({
           <SidebarProvider>
             <AppSidebar />
 
-            <main>
+            <main className="bg-gray-50">
               <SidebarTrigger />    
               {children}
             </main>
