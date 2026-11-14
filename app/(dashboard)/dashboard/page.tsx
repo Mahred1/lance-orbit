@@ -1,8 +1,10 @@
+import { requireAuth } from '@/lib/dal'
 import React from 'react'
 
-const Dashboard = () => {
+const Dashboard = async () => {
+  const session = await requireAuth()
   return (
-    <div>Dashboard</div>
+    <div>{session?.user.name}</div>
   )
 }
 

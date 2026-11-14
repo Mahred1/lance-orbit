@@ -3,10 +3,12 @@ import React from "react"
 import OauthButtons from "./OauthButtons"
 import Header from "./header"
 import { ThemeProvider } from "next-themes"
+import { requireGuest } from "../../lib/dal"
 
 const layout = async ({
   children,
 }: Readonly<{ children: React.ReactNode }>) => {
+  await requireGuest()
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
