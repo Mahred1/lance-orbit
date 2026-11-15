@@ -2,8 +2,7 @@ import DashboardCard from "@/components/ui/dashboard-card"
 import FilterSelect from "@/components/ui/filter-select"
 import PageHeader from "@/components/ui/page-header"
 import SearchFilter from "@/components/ui/search-filter"
-import TitleFilter from "@/components/ui/title-filter"
-import React from "react"
+import ProjectCard from "./_components/project-card"
 
 const page = () => {
   return (
@@ -33,6 +32,19 @@ const page = () => {
       <SearchFilter>
         <FilterSelect options={["all", "completed", "Uncompleted"]} />
       </SearchFilter>
+
+      {/* Projects */}
+      <section>
+        <ProjectCard
+          title="Market Reaserch"
+          description="Local competitor reaserch for the comming launch"
+          image="/project image.jpg"
+          progressValue={74}
+          clientLink=""
+          clientName="Arnold Kart"
+          date={new Date('11/2/2026')}
+        ></ProjectCard>
+      </section>
     </div>
   )
 }
