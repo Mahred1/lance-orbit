@@ -1,6 +1,7 @@
 import DashboardCard from "@/components/ui/dashboard-card"
 import PageHeader from "@/components/ui/page-header"
 import SearchFilter from "@/components/ui/search-filter"
+import TitleFilter from "@/components/ui/title-filter"
 import React from "react"
 
 const page = () => {
@@ -28,7 +29,10 @@ const page = () => {
         />
       </section>
       {/* Search bar & fiter*/}
-    <SearchFilter/>
+      <SearchFilter />
+      <TitleFilter options={["all", "completed", "undone"]}>
+        Payments
+      </TitleFilter>
     </div>
   )
 }

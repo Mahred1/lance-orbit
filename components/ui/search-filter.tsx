@@ -10,7 +10,7 @@ import {
 } from "./select"
 
 const SearchFilter = () => {
-  const items = [
+  const selectOptions = [
     { label: "All", value: "All" },
     { label: "Completed", value: "Completed" },
     { label: "Uncompleted", value: "Uncompleted" },
@@ -32,15 +32,15 @@ const SearchFilter = () => {
           />
         </InputGroup>
         {/* filter */}
-        <Select items={items}>
+        <Select items={selectOptions}>
           <SelectTrigger className="w-fit rounded-full bg-black px-6 py-4 text-white">
             <SelectValue className="text-white" placeholder="All" />
           </SelectTrigger>
-          <SelectContent className="transition-[opacity,scale] duration-200 ease-out data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0">
+          <SelectContent className="rounded-lg transition-[opacity,scale] duration-200 ease-out data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0">
             <SelectGroup>
-              {items.map((item) => (
-                <SelectItem key={item.value} value={item.value}>
-                  {item.label}
+              {selectOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
                 </SelectItem>
               ))}
             </SelectGroup>
