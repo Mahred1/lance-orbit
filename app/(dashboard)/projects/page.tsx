@@ -1,4 +1,5 @@
 import DashboardCard from "@/components/ui/dashboard-card"
+import FilterSelect from "@/components/ui/filter-select"
 import PageHeader from "@/components/ui/page-header"
 import SearchFilter from "@/components/ui/search-filter"
 import TitleFilter from "@/components/ui/title-filter"
@@ -29,10 +30,9 @@ const page = () => {
         />
       </section>
       {/* Search bar & fiter*/}
-      <SearchFilter />
-      <TitleFilter options={["all", "completed", "undone"]}>
-        Payments
-      </TitleFilter>
+      <SearchFilter>
+        <FilterSelect options={["all", "completed", "Uncompleted"]} />
+      </SearchFilter>
     </div>
   )
 }

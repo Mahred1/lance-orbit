@@ -1,20 +1,9 @@
 import { Search } from "lucide-react"
+import React from "react"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "./input-group"
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./select"
 
-const SearchFilter = () => {
-  const selectOptions = [
-    { label: "All", value: "All" },
-    { label: "Completed", value: "Completed" },
-    { label: "Uncompleted", value: "Uncompleted" },
-  ]
+const SearchFilter = ({children }:{children:React.ReactNode}) => {
+  
 
   return (
     <div className="flex flex-col gap-2.5">
@@ -32,20 +21,7 @@ const SearchFilter = () => {
           />
         </InputGroup>
         {/* filter */}
-        <Select items={selectOptions}>
-          <SelectTrigger className="w-fit rounded-full bg-black px-6 py-4 text-white">
-            <SelectValue className="text-white" placeholder="All" />
-          </SelectTrigger>
-          <SelectContent className="rounded-lg transition-[opacity,scale] duration-200 ease-out data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0">
-            <SelectGroup>
-              {selectOptions.map((option) => (
-                <SelectItem key={option.value} value={option.value}>
-                  {option.label}
-                </SelectItem>
-              ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+    {children}
       </div>
       {/* Line break */}
       <div className="w-full rounded-full border-b border-gray-200" />
