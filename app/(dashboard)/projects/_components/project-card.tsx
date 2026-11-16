@@ -30,7 +30,9 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
   
-     <div className="w-70 overflow-clip rounded-md border-[1.5px] border-gray-200 bg-gray-100 drop-shadow-sm">
+     <div className="w-70 overflow-clip relative rounded-md border-[1.5px] border-gray-200 bg-gray-100 drop-shadow-sm">
+      {/* overlay */}
+      <Link href={ROUTES.PROJECT_DETAIL('1')} className=" min-w-full min-h-full absolute top-0 left-0 z-1 "/>
       {/* image */}
       <div className="relative h-35">
         <Image
@@ -59,7 +61,7 @@ const ProjectCard = ({
           </Progress>
 
           {/* Name and date */}
-          <div className="flex items-center justify-between text-lo-xs text-gray-500">
+          <div className="flex items-center z-2 justify-between text-lo-xs text-gray-500">
             <Link className="hover:text-gray-600" href={clientLink}>
               {clientName}
             </Link>
