@@ -8,7 +8,7 @@ const TitleFilter = ({
   title: string
 }) => {
   return (
-    <div className="flex flex-col gap-2.5">
+    <div className="flex flex-col gap-2.5 w-full">
       {/* Search and Filter */}
       <div className="flex items-center justify-between">
         {/* Title */}
