@@ -4,8 +4,11 @@ import PageHeader from "@/components/ui/page-header"
 import SearchFilter from "@/components/ui/search-filter"
 import ProjectCard from "./_components/project-card"
 import { ROUTES } from "@/app/constants/routes"
+import { requireAuth } from "@/lib/dal"
 
-const page = () => {
+const page = async () => {
+   await requireAuth()
+  
   return (
     <div className="align flex flex-col gap-8 px-8">
       {/* Header */}
