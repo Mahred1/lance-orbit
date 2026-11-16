@@ -29,10 +29,10 @@ export function AppSidebar() {
 
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader className="mb-2">
+      <SidebarHeader className="mb-0">
         <Link className="flex items-center gap-2" href={ROUTES.DASHBOARD}>
           <Image
-            src={"orbit.svg"}
+            src={"/orbit.svg"}
             alt="lance orbit"
             width={24}
             height={24}
@@ -53,9 +53,10 @@ export function AppSidebar() {
                       className="group/navlink min-h-full min-w-full"
                       href={item.href}
                     >
+                     
                       <SidebarMenuButton
                         className={cn(
-                          pathname.includes(item.href)
+                          pathname?.includes(item.href)
                             ? styles.active
                             : styles.inActive,
                           "cursor-pointer rounded-md border-[0.5px] px-4 py-3 transition-all ease-in"

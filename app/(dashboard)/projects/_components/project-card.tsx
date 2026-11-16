@@ -1,3 +1,4 @@
+import { ROUTES } from "@/app/constants/routes"
 import {
   Progress,
   ProgressIndicator,
@@ -28,7 +29,7 @@ const ProjectCard = ({
   date,
 }: ProjectCardProps) => {
   return (
-   <Link href={''}>
+  
      <div className="w-70 overflow-clip rounded-md border-[1.5px] border-gray-200 bg-gray-100 drop-shadow-sm">
       {/* image */}
       <div className="relative h-35">
@@ -67,7 +68,7 @@ const ProjectCard = ({
         </div>
       </div>
     </div>
-   </Link>
+   
   )
 }
 

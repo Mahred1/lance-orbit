@@ -3,6 +3,7 @@ import FilterSelect from "@/components/ui/filter-select"
 import PageHeader from "@/components/ui/page-header"
 import SearchFilter from "@/components/ui/search-filter"
 import ProjectCard from "./_components/project-card"
+import { ROUTES } from "@/app/constants/routes"
 
 const page = () => {
   return (
@@ -40,7 +41,7 @@ const page = () => {
           description="Local competitor reaserch for the comming launch"
           image="/project image.jpg"
           progressValue={74}
-          clientLink=""
+          clientLink={''}
           clientName="Arnold Kart"
           date={new Date('11/2/2026')}
         ></ProjectCard>

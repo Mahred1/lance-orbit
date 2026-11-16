@@ -4,12 +4,12 @@ import { usePathname } from "next/navigation"
 
 export const useCurrentPath = () => {
   const pathname = usePathname()
-  let currentRoute = ""
+  let currentRoute: string = ""
 
   if (pathname) {
-    currentRoute = Object.entries(ROUTES)
-      .filter((route) => route.includes(pathname))
-      .toString().split(",")[1] //because it returns /Dashboard, /dashboard
+    currentRoute = Object.values(ROUTES)
+      .filter((route) => pathname.includes(route as string))
+      .toString()
   }
   return [currentRoute]
 }
