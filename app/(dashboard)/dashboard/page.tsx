@@ -7,7 +7,7 @@ const Dashboard = async () => {
   
   const session = await requireAuth()
   return (
-    <div className="align flex flex-col gap-8 px-8">
+    <div className="items-start flex flex-col gap-8 px-8">
       {/* Header */}
       <PageHeader>Dashboard Overview</PageHeader>
       {/* Dashboard Card */}

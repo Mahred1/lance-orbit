@@ -10,7 +10,7 @@ const page = async () => {
    await requireAuth()
   
   return (
-    <div className="align flex flex-col gap-8 px-8">
+    <div className="items-start flex flex-col gap-8 px-8">
       {/* Header */}
       <PageHeader>Projects</PageHeader>
 
