@@ -32,11 +32,11 @@ const MessageCard = ({
         <Image src="/xbox-x.svg" alt="" width={20} height={20} />
       </button>
 
-      <h2 className="mb-2.5 text-lo-display-xs leading-9 font-medium text-black">
+      <h2 className="mb-1.5 text-lo-lg leading-9 font-medium text-black">
         {title}
       </h2>
 
-      <p className="text-lo-md leading-6 text-gray-600">{message}</p>
+      <p className="text-lo-sm leading-6 text-gray-600">{message}</p>
     </section>
   )
 }
