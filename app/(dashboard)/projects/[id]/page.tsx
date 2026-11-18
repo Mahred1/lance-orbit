@@ -1,16 +1,20 @@
 "use client"
 import { ROUTES } from "@/app/constants/routes"
+import AddButton from "@/components/ui/add-button"
 import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbSeparator
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import PageHeader from "@/components/ui/page-header"
+import TitleButton from "@/components/ui/title-button"
 import { useRequireAuth } from "@/lib/auth-guards"
+import { Plus } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import MessageCard from "../_components/message-card"
+import MilestoneCard from "../_components/milestone-card"
 
 const Page = () => {
   useRequireAuth()
@@ -43,6 +47,25 @@ const Page = () => {
 
       {/* Message card */}
       <MessageCard message="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name it and how to configure it, if there is something i need to do outside of n8n like preparing a g form tell mew clearly, make it easy for a beginner my guy. monthly " />
+
+      {/* Milestones Section */}
+
+      <section className="flex w-full flex-col items-start gap-8">
+        <TitleButton title={`Milestones (2/3)`}>
+          <AddButton text="Add">
+            <Plus />
+          </AddButton>
+        </TitleButton>
+
+        {/* Milestone Cards */}
+        <div className="w-full">
+          <MilestoneCard />
+          <MilestoneCard />
+          <MilestoneCard />
+        </div>
+      
+      </section>
+
     </div>
   )
 }

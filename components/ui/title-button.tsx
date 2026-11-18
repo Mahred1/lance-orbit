@@ -1,6 +1,6 @@
 import React from "react"
 
-const TitleFilter = ({
+const TitleButton = ({
   children,
   title,
 }: {
@@ -12,7 +12,7 @@ const TitleFilter = ({
       {/* Search and Filter */}
       <div className="flex items-center justify-between">
         {/* Title */}
-        <h3 className="text-lo-display-xs font-medium">{title}</h3>
+        <h3 className="text-lo-lg font-medium">{title}</h3>
         {/* filter */}
         {children}
       </div>
@@ -22,4 +22,4 @@ const TitleFilter = ({
   )
 }
 
-export default TitleFilter
+export default TitleButton
