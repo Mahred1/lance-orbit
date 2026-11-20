@@ -4,7 +4,7 @@ import MilestoneAction from "./milestone-action"
 
 const MilestoneCard = () => {
   return (
-    <div className="flex h-fit w-full gap-2">
+    <div className="flex h-fit w-full gap-2.5 items-start max-w-180">
       {/* line and check */}
       <div className="relative self-stretch overflow-clip">
         <CircleCheck />
@@ -13,11 +13,11 @@ const MilestoneCard = () => {
       {/* content */}
       <div className="w-full">
         {/* title and buttons */}
-        <div className="mb-2 flex items-center justify-between">
+        <div className="mb-2.5 flex items-start justify-between">
           <h3 className="text-lo-sm font-semibold">Phase 1</h3>
           <div className="flex items-center gap-2">
-            <MilestoneAction type="remove"></MilestoneAction>
             <MilestoneAction type="undo"></MilestoneAction>
+            <MilestoneAction type="remove"></MilestoneAction>
           </div>
         </div>
         <p className="text-xs max-w-110 pb-8 text-gray-500">
