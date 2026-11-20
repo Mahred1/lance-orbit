@@ -18,6 +18,7 @@ import MilestoneCard from "../_components/milestone-card"
 import SummaryMetrics from "../_components/summary-metrics"
 import FilterSelect from "@/components/ui/filter-select"
 import ResourceItem from "@/components/ui/resource-item"
+import { Button } from "@/components/ui/button"
 
 const Page = () => {
   useRequireAuth()
@@ -84,12 +85,11 @@ const Page = () => {
           </AddButton>
         </TitleButton>
 
-
         {/* Payment summary */}
         <SummaryMetrics budget={1230} paid={123} remaining={658} />
 
         {/* Paymeny History */}
-        <div className="w-full  border border-gray-300 bg-gray-100 px-5 pt-10 pb-5">
+        <div className="w-full border border-gray-300 bg-gray-100 px-5 pt-10 pb-5">
           <TitleButton title="History">
             <FilterSelect
               variant="outline"
@@ -98,7 +98,7 @@ const Page = () => {
           </TitleButton>
 
           {/* payments */}
-          <ul className="mt-8 flex flex-col gap-2 items-center ">
+          <ul className="mt-8 flex flex-col items-center gap-2">
             <li>
               <ResourceItem
                 title="MVP Builds"
@@ -122,7 +122,7 @@ const Page = () => {
       </section>
 
       {/* updates */}
-       <section className="flex w-full flex-col items-start gap-8">
+      <section className="flex w-full flex-col items-start gap-8">
         {/*Header Section*/}
         <TitleButton title="Project Updates">
           <AddButton text="Add">
@@ -131,7 +131,7 @@ const Page = () => {
         </TitleButton>
 
         {/* Updates*/}
-        <div className="w-full  border border-gray-300 bg-gray-100 px-5 pt-10 pb-5">
+        <div className="w-full border border-gray-300 bg-gray-100 px-5 pt-10 pb-5">
           <TitleButton title="Updates">
             <FilterSelect
               variant="outline"
@@ -140,7 +140,7 @@ const Page = () => {
           </TitleButton>
 
           {/* updates list */}
-          <ul className="mt-8 flex flex-col gap-2 items-center ">
+          <ul className="mt-8 flex flex-col items-center gap-2">
             <li>
               <ResourceItem
                 title="MVP Builds"
@@ -163,6 +163,17 @@ const Page = () => {
         </div>
       </section>
 
+      {/* client portal */}
+      <section className="flex w-full flex-col items-center gap-8">
+        {/* Header */}
+        <TitleButton title="Client Portal">
+
+        </TitleButton>
+
+        {/* create Link */}
+
+        <Button className='rounded-sm px-6 py-3 '>New Portal</Button>
+      </section>
     </div>
   )
 }
