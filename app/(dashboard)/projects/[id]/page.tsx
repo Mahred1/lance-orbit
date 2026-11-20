@@ -15,6 +15,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import MessageCard from "../_components/message-card"
 import MilestoneCard from "../_components/milestone-card"
+import SummaryMetrics from "../_components/summary-metrics"
 
 const Page = () => {
   useRequireAuth()
@@ -58,14 +59,25 @@ const Page = () => {
         </TitleButton>
 
         {/* Milestone Cards */}
-        <div className="w-full">
+        <div className="w-full flex flex-col items-center">
           <MilestoneCard />
           <MilestoneCard />
           <MilestoneCard />
         </div>
-      
       </section>
 
+      {/* Payment Section */}
+      <section className="flex w-full flex-col items-start gap-8" >
+        {/*Header Section*/}
+        <TitleButton title="Payments">
+          <AddButton text="Add">
+            <Plus />
+          </AddButton>
+        </TitleButton>
+
+        {/* Payment Stats */}
+        <SummaryMetrics budget={1230} paid={123} remaining={658}/>
+      </section>
     </div>
   )
 }
