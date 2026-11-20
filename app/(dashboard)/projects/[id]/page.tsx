@@ -16,6 +16,8 @@ import { usePathname } from "next/navigation"
 import MessageCard from "../_components/message-card"
 import MilestoneCard from "../_components/milestone-card"
 import SummaryMetrics from "../_components/summary-metrics"
+import FilterSelect from "@/components/ui/filter-select"
+import ResourceItem from "@/components/ui/resource-item"
 
 const Page = () => {
   useRequireAuth()
@@ -59,15 +61,22 @@ const Page = () => {
         </TitleButton>
 
         {/* Milestone Cards */}
-        <div className="w-full flex flex-col items-center">
-          <MilestoneCard />
-          <MilestoneCard />
-          <MilestoneCard />
-        </div>
+
+        <ul className="flex w-full flex-col items-center">
+          <li>
+            <MilestoneCard />
+          </li>
+          <li>
+            <MilestoneCard />
+          </li>
+          <li>
+            <MilestoneCard />
+          </li>
+        </ul>
       </section>
 
+      <section className="flex w-full flex-col items-start gap-8">
       {/* Payment Section */}
-      <section className="flex w-full flex-col items-start gap-8" >
         {/*Header Section*/}
         <TitleButton title="Payments">
           <AddButton text="Add">
@@ -75,8 +84,41 @@ const Page = () => {
           </AddButton>
         </TitleButton>
 
-        {/* Payment Stats */}
-        <SummaryMetrics budget={1230} paid={123} remaining={658}/>
+
+        {/* Payment summary */}
+        <SummaryMetrics budget={1230} paid={123} remaining={658} />
+
+        {/* Paymeny History */}
+        <div className="w-full  border border-gray-300 bg-gray-100 px-5 pt-10 pb-5">
+          <TitleButton title="History">
+            <FilterSelect
+              variant="outline"
+              options={["all Payments", "latest payments", "oldest payments"]}
+            ></FilterSelect>
+          </TitleButton>
+
+          {/* payments */}
+          <ul className="mt-8 flex flex-col gap-2 items-center ">
+            <li>
+              <ResourceItem
+                title="MVP Builds"
+                description="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name"
+              />
+            </li>
+            <li>
+              <ResourceItem
+                title="MVP Builds"
+                description="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name"
+              />
+            </li>
+            <li>
+              <ResourceItem
+                title="MVP Builds"
+                description="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   )
