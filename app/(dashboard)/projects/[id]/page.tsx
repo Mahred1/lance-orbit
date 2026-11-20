@@ -75,8 +75,8 @@ const Page = () => {
         </ul>
       </section>
 
-      <section className="flex w-full flex-col items-start gap-8">
       {/* Payment Section */}
+      <section className="flex w-full flex-col items-start gap-8">
         {/*Header Section*/}
         <TitleButton title="Payments">
           <AddButton text="Add">
@@ -120,6 +120,49 @@ const Page = () => {
           </ul>
         </div>
       </section>
+
+      {/* updates */}
+       <section className="flex w-full flex-col items-start gap-8">
+        {/*Header Section*/}
+        <TitleButton title="Project Updates">
+          <AddButton text="Add">
+            <Plus />
+          </AddButton>
+        </TitleButton>
+
+        {/* Updates*/}
+        <div className="w-full  border border-gray-300 bg-gray-100 px-5 pt-10 pb-5">
+          <TitleButton title="Updates">
+            <FilterSelect
+              variant="outline"
+              options={["all updates", "latest updates", "oldest updates"]}
+            ></FilterSelect>
+          </TitleButton>
+
+          {/* updates list */}
+          <ul className="mt-8 flex flex-col gap-2 items-center ">
+            <li>
+              <ResourceItem
+                title="MVP Builds"
+                description="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name"
+              />
+            </li>
+            <li>
+              <ResourceItem
+                title="MVP Builds"
+                description="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name"
+              />
+            </li>
+            <li>
+              <ResourceItem
+                title="MVP Builds"
+                description="Finish before the give me atep by step instruction on hw to build this n8n automation ,iclude what node to use what to name"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </div>
   )
 }
