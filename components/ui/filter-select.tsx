@@ -35,7 +35,7 @@ const FilterSelect = ({
       >
         <SelectValue
           className={cn(variant==='default' ?"text-white":"text-black")}
-          placeholder={selectOptions.at(1)?.label}
+          placeholder={selectOptions.at(0)?.label}
         />
       </SelectTrigger>
       <SelectContent className="rounded-lg transition-[opacity,scale] duration-200 ease-out data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0">
